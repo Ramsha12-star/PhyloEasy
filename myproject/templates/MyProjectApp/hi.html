@@ -1,0 +1,413 @@
+<!-- templates/hi.html -->
+
+ 
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project File</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 4.7 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <!--  -->
+     <!-- footer-->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Untitled</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+<style>
+
+   p{
+       text-align: justify;
+   }
+   a:hover{
+       text-decoration: none;
+   }
+        .p1{
+            text-align: center;
+            font-size: larger; 
+            color: darkblue;
+            margin:0;
+              
+        }
+        .p2{
+           text-align: center;
+            color: darkblue; 
+            font-size: 40px;  
+            margin:0;
+            
+        }
+        .p3{
+            text-align: justify;
+            font-size: medium; 
+            color: rgb(1, 1, 5);
+            margin:0;
+        }
+        /*.div1{
+            border-style:groove;
+            width: 50%;
+            height: 130px;
+            border-color:#6495ED;
+            
+        }*/
+        .div1 .item {
+            background: white;
+          
+        }
+
+        .div1 .item:hover {
+            background: white;
+            box-shadow: 0 0 0 2px #d0d0d0;
+        }
+        .center{
+                 display: inline-block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 100%;
+                 
+                }
+                h1{
+                    color: darkblue;
+                    text-decoration: underline;
+                    
+                }
+                .footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color: #151B8D;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px white;
+  margin:0 8px;
+  color: white;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+</style>
+ 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body style="background-color: white;">
+    <form action="{% url 'xyz' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+       
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+              <a href="{% url 'home-page' %}" class="w3-bar-item w3-button"><b>PhyloEasy</b></a>
+              <!-- Float links to the right. Hide them on small screens -->
+              <div class="w3-right w3-hide-small">
+                <a href=""></a>
+                <a href="{% url 'Tutorials' %}" class="w3-bar-item w3-button">Tutorial</a>
+                <a href="{% url 'About' %}" class="w3-bar-item w3-button">About</a>
+                <a href="{% url 'Contactpg' %}" class="w3-bar-item w3-button">Contact</a>
+                
+              </div>
+              </div>
+        </div>
+       
+       
+    
+     <!-- Header -->
+     <p>&nbsp </p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1400px;" id="home">
+            <img src="{% static "images/PhyloEasy.png" %}"  alt="PhyloEasy"  height="475" class="center">
+        
+        </header>
+        
+    
+ 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1 class="text-center"> Welcome to PhyloEasy</h1>
+        <p class="p3">
+            <b>PhyloEasy a client-server freely available online web application that allows users to interactively build their own choice phylogenetic trees 
+             and visualize it in a graphical interface. PhyloEasy is a tool that allows the user to build different distance-based phylogenetic trees in one 
+              easy-to-use web application. PhyloEasy builds two types of trees, NJ and UPGMA trees.</b></p>
+    <h1 class="text-center">Build your own PhyloEasy Tree </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <p style=" text-align: left;  color: crimson;" > <b>Progressive sequence alignment by CLUSTALW</b></p>
+            <p><b> Upload your Fasta sequence file:</b>  Support Format: (FASTA pearson)
+            </p>
+            <div style="margin:0;">
+        
+                <p style="margin: 0;"><b>Choose file that contain your Query:</b>
+                    <input type="file"  accept=".fasta" id="document" name="document" 
+                     style="margin-left:0%; color: hsl(0, 98%, 52%) " id="fileInput"></p>
+                <br>
+                <p><b>Display box shows the uploaded File:</p>
+            </div>
+            <div class="div1" style="width: 63.5%;"  id="dropContainer">
+               <div class="item">
+                <textarea id="result"  cols="90" rows="10" style="font-size: small;" > 
+                
+                Example:
+                >YP_009742608.1_SARS-CoV 2 
+                MESLVPGFNEKTHVQLSLPVLQVRDVLVRGFGDSVEEVLSEARQHLKDGTCGLVEVEKGVLPQLE
+                QPYVFIKRSDARTAPHGHVMVELVAELEGIQYGRSGETLGVLVPHVGEIPVAYRKVLLRKNGNKG
+                AGGHSYGADLKSFDLGDELGTDPYEDFQENWNTKHSSGVTRELMRELNGG
+                
+                </textarea>
+                <p style="color: crimson;  ;"><small>User won't be able to paste your own sequences into the display box.</small></p>
+            </div>
+        
+            </div>
+            <button type="button" class="btn btn-primary"
+             style="margin-left: 59%", onclick="clearText()">Clear</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <p style=" text-align: left;  color: crimson; margin:0;">
+                <b>Parameters for Phylogenetic Tree:</b></p>
+            <br>
+            <b>Complete-Deletion  
+                <input type="radio" name="deletion" value="yes" />Yes
+            <input type="radio" name="deletion" value="no"  /> No
+            <br>
+            <br>
+            <b>Substitution Model : Pairwise Distance Model </b>
+            <br>
+            <br>
+            <b>Tree Clustering Type :  <input type="radio" name="ctype" value="nj">NJ 
+                <input type="radio" name="ctype" value="upgma"  > UPGMA</b>
+            <br>
+            <br>
+            <b>Bootstrap Range: 1000</b>
+            <br>
+            <button onclick="myFunction()" type="submit" class="btn btn-primary" style="margin-left: 59%;">Execute</button>
+            <br></b>
+            <p id="demo" style="color: crimson;"></p>
+        </div>
+    </div>
+
+</div>
+<br>
+
+</form>
+{% endblock content %}
+
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Please be pateint your file is under process.";
+    }
+</script>
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<script>
+   function clearText(){
+    document.getElementById('result').innerHTML = '';
+}
+
+</script>
+<script>// dragover and dragenter events need to have 'preventDefault' called
+      // in order for the 'drop' event to register. 
+      // See: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations#droptargets
+      $(document).ready(function(){
+        window.onload = function() {
+
+//Check File API support
+if (window.File && window.FileList && window.FileReader) {
+    
+    $("#document").change(function(event) { // on file input change run this function that takes an event as an argument
+        
+        var files = event.target.files; // new FileList object
+        //var output = document.getElementById("result");
+
+        for (var i = 0; i < files.length; i++) { // loop through all the files selected
+            
+            var file = files[i]; // var file is anything in the files object
+            
+            //Only plain text
+            
+            //if (!file.type.match('plain')) continue;
+         
+            var parsedFile = new FileReader(); // create a new FileReader object
+            
+            parsedFile.readAsText(file); // calls the readAsText method with the text file contents as the argument
+            
+            parsedFile.addEventListener("load", function(event) { // listen for load event of new FileReader object & do the following...
+                var textFile = event.target; // create a textFile variable from the target
+                console.log(textFile.result)
+                var lines = textFile.result.split(/[\r\n|\n]+/); // create an array by splitting the target contents by line
+                var html = "";
+                for(i=0;i<lines.length;i++) {
+                    html += i + ":" + lines[i];
+                }
+                
+                $("#result").text(html);
+            });
+ 
+            }
+        });
+    }
+    else { // File object not supported
+        console.log("Your browser does not support File API");
+    }
+}        
+    });
+      </script>
+
+<div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Site Links</h3>
+                    <ul>
+                        <li><a href="{% url 'home-page' %}">Home</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="{% url 'Tutorials' %}">Manual</a></li>
+                        <li><a href="/downloadpy9/">PhyloEasy PDF</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="{% url 'About' %}">Project</a></li>
+                        <li><a href="{% url 'About' %}">Team</a></li>
+                        <li><a href="{% url 'Contactpg' %}">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>PhyloEasy</h3>
+                    <ul>
+                        <li><a href="https://www.pahgncb.com/genomedb/public//">PAGH Database </a></li>
+                        <li><a href="https://www.pahgncb.com/genomedb/public/lab">Comparative and Evolutionary Genomics Lab </a></li>
+                        <li><a href="http://ncb.qau.edu.pk/index.php/dr-amir-ali-abbasi.html">National Center for Boinformatics </a></li>
+                        <li><a href="https://qau.edu.pk/">Quaid-i-Azam University, Islamabad </a></li>
+                </div>
+                <div class="col item social"><a href="https://www.facebook.com/PhylogenomicAnalysisHumanGenome/"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/home"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p class="copyright">PhyloEasy © 2022</p>
+        </div>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

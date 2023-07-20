@@ -1,0 +1,361 @@
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <!-- footer-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+<style>
+ .mid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+
+.center{
+                 display: inline-block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 100%;
+                 
+                }
+.set image{
+                 display: inline-block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 100%;
+}
+.cent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+h1{
+                    color: darkblue;
+                    text-decoration: underline;
+                    
+                }
+                .btn {
+                 background-color: darkblue;
+                 border: none;
+                 color: white;
+                 padding: 12px 30px;
+                 cursor: pointer;
+                 font-size: 20px;
+                 margin-left: 40%;
+                 margin-right: auto;
+                
+                 }
+
+             /* Darker background on mouse-over */
+            .btn:hover {
+                 background-color: RoyalBlue;
+                }
+                .footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color: #151B8D;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px white;
+  margin:0 8px;
+  color: white;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+</style>
+    <title>Tutorials</title>
+</head>
+
+<body>
+    <form action="{% url 'xyz' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="{% url 'home-page' %}" class="w3-bar-item w3-button"><b>PhyloEasy</b></a>
+                <!-- Float links to the right. Hide them on small screens -->
+                <div class="w3-right w3-hide-small">
+                    <a href="{% url 'Tutorials' %}" class="w3-bar-item w3-button">Tutorial</a>
+                    <a href="{% url 'About' %}" class="w3-bar-item w3-button">About</a>
+                    <a href="{% url 'Contactpg' %}" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Header -->
+        <p>&nbsp </p>
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1400px;" id="home">
+            <img src="{% static "images/phyloEasy.png" %}"  alt="PhyloEasy"  height="475" class="center">
+        </header>
+       <div class="btn">
+             <a href="/downloadpy9/" download="Welcome To PhyloEasy User Tutorial.pdf"><i class="fa fa-download"></i> Download Tutorial PDF</a>
+        </div>
+    <div class="container" style="text-align: justify">
+           
+        <h2>Welcome To PhyloEasy User Tutorial</h2>
+        <p>
+            Thank you for deciding to conduct your research with <b style="color: darkblue;">PhyloEasy</b>. This manual contains detailed instructions for PhyloEasy. Our PhyloEasy clients may want to read this manual which tries to cover every significant aspect of PhyloEasy that might be useful for clients.
+        </p>
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1400px;" id="home">
+           
+        </header>
+        <p>
+            PhyloEasy is a web-based program that has been designed to ensure the scientific study of evolution. The purpose of the program is to provide an easy-to-use web application for exploring, discovering, and assessing biological data from an evolutionary perspective. 
+            By employing distance-based approaches for molecular phylogenetic analysis, PhyloEasy expands the scope of its predecessor's investigations from single genes to the whole genome. It employs a basic methodology that is easily accessible to the scientific 
+            community for their research work. It is a user interface that allows users to select criteria that are appropriate for understanding ancestry, evolution, and adaptability.
+            <br> This tutorial provides an overview of the PhyloEasy features.
+        </p>  
+            <br>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+                <img src="{% static "images/frrnt.jpg" %}"  alt="PhyloEasy" class="mid">
+                
+                </header>
+        <p>
+            PhyloEasy is an interactive, user friendly and novel web program for comparative phylogenetic analysis. Homepage is highly compact, with tab buttons linking to the Tutorial, About, and Contact sections. If you have any questions or suggestions, please contact us.
+
+
+        </p>
+        <br>
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/Clear.jpg" %}"  alt="CLUSTALW"  class="mid">
+            </header>
+        <p>
+           The Home-page contains three sections, the first section contain introduction, in the second section user upload their FASTA sequence file and remember in display box user  won't be able to paste their own sequences. 
+           PhyloEasy supports sequence alignment using CLUSTALW program. 
+            The display box shows what's inside in your uploaded <b>(.FASTA)</b> file. The clear button clear the all text from display box.  
+        </p> 
+        
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/execute.jpg" %}"  alt="parameters"  class="mid">
+            </header>
+        <p>
+
+            After uploading sequence file user select Parameters according to their interest.  If user want <b>complete deletion </b> (Gaps/Missing data treatment) from sequence file after alignment then select <b> yes </b>option otherwise select<b> no</b>.
+            Substitution model contain P-Distance Model. In <b> Clustering </b> user select NJ and UPGMA option according to their requirement. To see if the tree's phylogeny is correct, PhyloEasy employs the bootstrap approach, with the number of bootstrap replications set at 100. Click on <b>Execute button </b> phylogenetic tree. 
+
+            
+        </p>
+        <h1 class="text-center">Evolutionary history of GLI gene family is explained using NJ and UPGMA tree.</h1>
+        
+        <p>
+           <b> Result: </b>
+          Through PhyloEasy the evolutionary relationships of taxa was inferred using Neighbor-Joining method and unweighted pair group method with arithmetic mean. The evolutionary distances were evaluated using the p-distance method. The finest tree based on the sum of branch lengths. The total percentage of duplicate trees with related taxa grouped together is shown above the branches.  
+
+        </p>
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/Outtree.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b > Figure: PhyloEasy built NJ tree based on pairwise distances with complete deletion for 29 GLI sequences.</b></p>
+            <p>Rooted NJ tree using PhyloEasy web application with complete deletion "yes", bootstrap set at 100 and P-distance is selected for the distance model analysis. After selecting complete deletion there is no gaps or missing data in the alignment file. So when there is no gaps or missing data in the alignment file then tree branches and clade are draw short according to branch lengths.</p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/noOuttree.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b > Figure: PhyloEasy built NJ tree based on pairwise distances without complete deletion for 29 GLI sequences.</b></p>
+            <p>Rooted NJ tree using PhyloEasy web application with complete deletion "No", bootstrap set at 100 and P-distance is selected for the distance model analysis. If we did not select complete deletion option the tree branches are drawn in expanded form because there is no deletion of nucleotides/amino acids from the alignment file.</p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/upgmayes.jpg" %}"  alt="parameters"  class="mid">
+            </header>
+            <p style="text-align: center;"><b > Figure: PhyloEasy construct UPGMA tree based on pairwise distances with complete deletion for 29 GLI sequences. </b></p>
+            <p>PhyloEasy built UPGMA tree with complete deletion "Yes", bootstrap set at 100 and P-distance is selected for the distance model analysis.  UPGMA tree explain the evolutionary history of GLI gene family by duplicating nodes. Each node represent recent and accent duplication.</p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/upgmano.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b > Figure: PhyloEasy construct UPGMA tree based on pairwise distances without complete deletion for 29 GLI sequences. </b></p>
+            <p>PhyloEasy built UPGMA tree with complete deletion "No", bootstrap set at 100 and P-distance is selected for the distance model analysis.UPGMA tree explain the evolutionary history of GLI gene family by duplicating nodes. Each node represent recent and accent duplication.</p>
+        
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/alig.png" %}"  alt="parameters"  class="mid">
+            </header>
+            <p style="text-align: center;">From Alignment file button user can download alignment files in three alignment formates(.aln, .fasta, .Phy). Open your alginment files in a proper editor like Visual studio code.</p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/dist.png" %}"  alt="parameters" class="mid">
+            </header>
+
+            <p>From Pairwise distance file button user can access P-Distance files in .txt and .csv format. Both files contain pairwise distances between their query species. Csv file provide species distances in a matrix form. </p>
+
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/teef.png" %}"  alt="parameters" class="mid">
+            </header>
+            <p>From Tree files button user can download Tree files in different format according to their requirement (.nwk, .nex, .xml). Each Tree file contain species branch lengths according to their clade divisions.</p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/Imgg.png" %}"  alt="parameters"  class="mid">
+            </header>
+            <p>
+            From PhyloEasy result page users download Tree images in these format (.jpg, .png, .pdf).
+            For Tree visualization in Mega software, User Can download Tree.nwk file from PhyloEasy site and open it with Mega software.
+            </p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/ali.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b >Figure: Build amino acid multiple sequence alignment of GLI gene family </b></p>
+            <p>Species selected for generating multiple sequence alignment are:  Homo sapiens (Human), Mus musculus (Mouse), Rattus norvegicus (brown rat), Tetraodon nigrovirds (green spotted puffer), Gasterosteus aculeatus (Stickleback), Danio rerio (Zebrafish), Takifugu rubripes (Fugu), Branchiostoma floridae (Amphioxus), Ciona savignyi (Ascidian), Strongulocentrotus purpuratus (Sea urchin), Drosophila melanogaster (Fruit fly), Aps mellifera (Honey bee). An asterisk (*) indicates postion in which amino acid residues is 100% conserved in a column. A colon (:) indicates conservative substitutions. A dot (.) indicates less conservative substitutions. The hyphens (-) indicate the positions of insertions or deletions.  </p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/Distn.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b>Figure: UPGMA Distance Matrix for Pairwise distances between species.</b></p>
+            <h1 class="text-center">Formats for describing Phylogenetic trees</h1>
+        
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/nex.jpg" %}"  alt="parameters"  class="mid">
+            </header>
+            <p style="text-align: center;"><b >Figure: Nexus file of species that contain GLI gene.  </b></p>
+            <P>Nexus file starts with #NEXUS header. Nexus file contain multiple blocks like Taxa, Data, and Tree blocks. Taxa block of nexus file contain all information related to taxa or species. Data block contain sequence alignment information in a data matrix form. The Tree block contain information about species phylogenetic trees in a specified Newick format.</P>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/spec.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b >Figure: Newick Tree file of species that contain GLI gene.  </b></p>
+            <p>Newick tree file represent trees with edge lengths using commas and parentheses. Newick tree file contain distances and leaf name. Leaf name and distance length is separated by colon sign (:)  Subtree are ended with semicolon sign (;).</p>
+            <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Tutorial">
+            <img src="{% static "images/clade.jpg" %}"  alt="parameters" class="mid">
+            </header>
+            <p style="text-align: center;"><b >Figure: Phylogenetic trees are stored in XML files.  </b></p>
+            <p>The Phyloxml file contains information such as clade branch lengths, species names, and support values for each clade. The Clade is the fundamental structural element of these phylogenetic trees, with each clade including a recursive succession of clades.</p>
+        </p>
+        
+    </div>
+    </form>
+    {% endblock content %}
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Site Links</h3>
+                        <ul>
+                            <li><a href="{% url 'home-page' %}">Home</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Documentation</h3>
+                        <ul>
+                            <li><a href="{% url 'Tutorials' %}">Manual</a></li>
+                            <li><a href="/downloadpy9/">PhyloEasy PDF</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="{% url 'About' %}">Project</a></li>
+                            <li><a href="{% url 'About' %}">Team</a></li>
+                            <li><a href="{% url 'Contactpg' %}">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>PhyloEasy</h3>
+                        <ul>
+                            <li><a href="https://www.pahgncb.com/genomedb/public//">PAGH Database </a></li>
+                            <li><a href="https://www.pahgncb.com/genomedb/public/lab">Comparative and Evolutionary Genomics Lab </a></li>
+                            <li><a href="http://ncb.qau.edu.pk/">National Center for Boinformatics </a></li>
+                            <li><a href="https://qau.edu.pk/">Quaid-i-Azam University, Islamabad </a></li>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">PhyloEasy © 2022</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

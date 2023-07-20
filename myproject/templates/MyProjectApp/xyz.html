@@ -1,0 +1,441 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+        <title style="font-family:courier;">PhyloEasy Results</title>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <!-- footer-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+            .navbar{
+                    background-color: #333;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    display: block;
+                    transition: top 0.3s;
+            }
+   
+            a:hover{
+       text-decoration: none;
+                   } 
+            .p1{
+                text-align: center;
+                font-size: larger; 
+                color: darkblue;
+                margin:0;
+                  
+            }
+            .img{
+                 display: block;
+                 margin-left: auto;
+                 margin-right: auto;
+                }
+            .p2{
+                text-align: left;
+                font-size: larger; 
+                color: black;
+                margin:0;
+              
+            }
+            .btn {
+                border: none;
+                background-color: inherit;
+                padding: 14px 28px;
+                font-size: 16px;
+                cursor: pointer;
+                display: inline-block;
+            }
+            /* Green */
+            .Alignment {
+                color: green;
+            }
+
+            .Alignment:hover {
+                background-color: #04AA6D;
+                border-radius: 10px;
+                color: white;
+           }
+
+           /* Orange */
+           .Pairwise {
+           color: orange; 
+        }
+
+        .Pairwise:hover {
+            background: #ff9800;
+            border-radius: 10px;
+            color: white;
+            }
+
+        /* Red */
+        .Tree {
+            color: red;
+        }
+
+        .Tree:hover {
+            background: #f44336;
+            border-radius: 10px;
+            color: white;
+    }
+
+        /* Gray */
+        .Images {
+            color: darkblue;
+        }
+
+        .Images:hover {
+            background: darkblue;
+            border-radius: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            border:1px solid black;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+            border-radius: 10px;
+            margin: 0px 10px;
+        }
+       .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .w3-top{
+            position: relative !important;
+            border-bottom: 1px solid #ccc !important;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #ddd;}
+
+         .dropdown:hover .dropdown-content {display: block;}
+         .inner{
+                display: inline-block;
+            }           
+            .img{
+                width: 70vw;   
+                height: 100vh;
+               
+            }
+            .center{
+                 display: inline-block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 100%;
+                 
+                }
+            .bton {
+                 background-color: DodgerBlue;
+                 border: none;
+                 color: white;
+                 padding: 12px 30px;
+                 cursor: pointer;
+                 font-size: 20px;
+                 }
+
+             /* Darker background on mouse-over */
+            .bton:hover {
+                 background-color: royalblue;
+                }
+                .center {
+                   display: block;
+                   margin-left: auto;
+                   margin-right: auto;
+                   height: 100%;
+                   width: 110%;
+                }
+                .footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:	#151B8D;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px white;
+  margin:0 8px;
+  color: white;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body style="background-color: white;">
+        <div class="container-fluid m-0 p-0">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="text-center">
+       
+                    
+                    <form action="{% url 'xyz' %}" method="POST" enctype="multipart/form-data">
+       
+                        <div class="w3-top">
+                            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                              <a href="{% url 'home-page' %}" class="w3-bar-item w3-button"><b>PhyloEasy</b></a>
+                              <!-- Float links to the right. Hide them on small screens -->
+                              <div class="w3-right w3-hide-small">
+                                <a href="{% url 'Tutorials' %}" class="w3-bar-item w3-button">Tutorial</a>
+                                <a href="{% url 'About' %}" class="w3-bar-item w3-button">About</a>
+                                <a href="{% url 'Contactpg' %}" class="w3-bar-item w3-button">Contact</a>
+                              </div>
+                              </div>
+                        </div>
+                    
+                     </form>
+                     
+                      
+                      <div class="w3-container w3-padding-32" id="Results">
+                        
+                        
+                         
+                        <script>
+                           function ab(url){
+                           
+                           var flname=$('#fl').val();
+                           
+                           
+                           
+                               window.location.href =url+"?name="+flname;
+                           }
+                        </script>  
+
+                     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="color: darkblue;text-decoration: underline;">PhyloEasy Results</h1> 
+                     <h3 value="1" style="text-align: center; color: red; text-decoration: underline;">Your Token ID: {{y}}</h3>
+                      <h4 style="text-align: left; color: #151B8D; text-decoration:underline;"><b>Enter your Token to Download files:</b></h4>
+                        <div style="position: absolute;">
+                            
+                            
+                           <input id="fl" placeholder="User Token ID" style="color: #04AA6D;">
+                            </div> 
+                            <br>
+                            <br>
+                            
+            
+                  <div class="dropdown">
+                      <button class="btn Alignment Files" style="font-weight:bold;">Alignment File</button>
+                      <div class="dropdown-content" style="width: 140px;">
+                          <a data-inline="true"></a>
+                         
+                           
+                          <a onclick="ab('/downloadpy1/')" download="Alignment.aln">Alignment.aln</a>
+                          <a onclick="ab('/downloadpy2/')" download="Alignment.phy">Alignment.phy</a>
+                          <a onclick="ab('/downloadpy3/')" download="Alignment.fasta">Alignment.fasta</a>
+                      </div>
+                  
+                  </div>
+                   <div class="dropdown">
+                      <button class="btn Pairwise Distance" style="font-weight:bold; width: 160px;">Pairwise Distance</button>
+                      <div class="dropdown-content" style="width: 160px;">
+                          <a data-inline="true"></a>
+                          <a onclick="ab('/downloadpy4/')" download="Pairwse Distance.txt">Pairwise Distance.txt</a>
+                          <a onclick="ab('/downloadpy5/')" download="Distance Matrix.csv">Distance Matrix.csv</a>
+                          
+                      </div>
+                   </div>
+                  
+                    <div class="dropdown">
+                       <button class="btn Tree Files" style="font-weight:bold; width: 140px;" >Tree Files</button>
+                       <div class="dropdown-content" style="width: 140px;">
+                         <a data-inline="true"></a>
+                         <a onclick="ab('/downloadpy6/')" download="Tree.nwk">Tree.nwk</a>
+                         <a onclick="ab('/downloadpy7/')" download="Tree.nex">Tree.nex</a>
+                         <a onclick="ab('/downloadpy8/')" download="Tree.xml">Tree.xml</a>
+                      </div>
+                    </div>  
+                  
+                    <div class="dropdown">
+                      <button class="btn Tree Images" style="font-weight:bold; width: 140px; ">Tree Images</button>
+                      <div class="dropdown-content" style="width: 140px;">
+                         <a data-inline="true"></a>
+                         <a onclick="ab('/download_image/')" download="Tree.png">Tree.png</a>
+                        
+                         <a onclick="ab('/download_image2/')" download="Tree.pdf">Tree.pdf</a>
+                      </div> 
+                    </div>  
+                </div>  
+        
+                </div>
+                
+               </div>
+           </div>
+       </div>
+       
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <header class="w3-display-container w3-content w3-wide" style="max-width:1000px;" id="Image">
+                        <img src="{% static "images/PhyTree.png" %}" alt="Tree image" class="center" >
+                       
+                        
+                        </header>
+                    
+                </div>
+                    
+            </div>
+        </div>
+    </div> 
+
+        <!-- <div style="width: 100%;  border-style:groove;">
+            <div class="img" style="max-width:500px">
+                
+              .img{
+    width: 70vw;
+    height: 90vh;
+             </div>  
+        </div>  -->
+        
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Site Links</h3>
+                            <ul>
+                                <li><a href="{% url 'home-page' %}">Home</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Documentation</h3>
+                            <ul>
+                                <li><a href="{% url 'Tutorials' %}">Manual</a></li>
+                                <li><a href="/downloadpy9/">PhyloEasy PDF</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="{% url 'About' %}">Project</a></li>
+                                <li><a href="{% url 'About' %}">Team</a></li>
+                                <li><a href="{% url 'Contactpg' %}">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>PhyloEasy</h3>
+                            <ul>
+                                <li><a href="https://www.pahgncb.com/genomedb/public//">PAGH Database </a></li>
+                                <li><a href="https://www.pahgncb.com/genomedb/public/lab">Comparative and Evolutionary Genomics Lab </a></li>
+                                <li><a href="http://ncb.qau.edu.pk/">National Center for Boinformatics </a></li>
+                                <li><a href="https://qau.edu.pk/">Quaid-i-Azam University, Islamabad </a></li>
+                        </div>
+                        <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">PhyloEasy © 2022</p>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+</html>
